@@ -1,3 +1,5 @@
+Live: https://hanankhandev-coder.github.io/Stipple/
+
 # Stipple
 
 A one-page landing site for **Stipple**, a fictional SaaS that keeps every brand photo on brand. A team sets up one **Style Card** (grade, crop, type, colour), and every photo anyone exports goes through it, so posters, socials and shop windows all look like the same brand.
