@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stipple — Keep every image on brand</title>
+<meta name="description" content="Stipple runs every photo through one Style Card, so every export looks like the same brand.">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('is-loading')</script>
+</head>
+<body>
+
+<header class="top">
+  <nav class="top__side" aria-label="Main"><a href="#how">How it works</a><a href="#ferro">Customers</a></nav>
+  <a class="logo" href="#top" aria-label="Stipple home"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 1h10v4H6zM2 5h4v4H2zM6 9h8v4H6zM14 13h4v4h-4zM2 17h12v-4H2z"/></svg><span>Stipple</span></a>
+  <nav class="top__side top__side--r" aria-label="Account"><a href="#pricing">Pricing</a><a class="btn btn--white" href="#join">Try it free</a></nav>
+</header>
+
+<!-- Hero (Third Point). Loads as a stacked deck that deals out into the cluster. On scroll the Style Card
+     grows into ONE banner card whose pieces move and recolour: intro → photo → sizes → three customers → feed. -->
+<section class="hero" id="top">
+  <div class="hero__sticky">
+    <div class="say say--hero">
+      <i class="say__dot"></i>
+      <h1 class="say__line" data-text="Keep every image on brand">Keep every image on brand</h1>
+    </div>
+    <div class="stagebox">
+      <div class="stage">
+        <b class="c c-mark"><span class="v-intro v-photo v-sizes v-feed">Stipple</span><span class="v-ferro">Ferro Athletic</span><span class="v-kiln">Kiln &amp; Co</span><span class="v-north">North Paw</span></b>
+        <p class="c-quote"><span class="v-ferro">“We shot once and shipped for a month.”</span><span class="v-kiln">“Our feed finally looks like our shop.”</span><span class="v-north">“Freelancers get the card on day one.”</span></p>
+        <div class="c c-foot">
+          <p class="c-big"><span class="v-intro v-feed">Seen your feed<br>lately …?</span><span class="v-photo">One card,<br>every photo</span><span class="v-sizes">Every size,<br>at once</span><span class="v-ferro">Mei Tanaka</span><span class="v-kiln">Kai Moreno</span><span class="v-north">Leo Adeyemi</span></p>
+          <p class="c-tiny"><span class="v-intro v-feed">Free for 50 exports a month. Your first Style Card takes two minutes.</span><span class="v-photo">Grade, crop, type and colour live on one card. Every export your team makes reads from it.</span><span class="v-sizes">Drop a shoot in once. Stipple sends it out as posters, socials and shop windows, each cut and graded the same way.</span><span class="v-ferro">Brand lead. Card: warm grade, 4:5 crop, Switzer, blue band.</span><span class="v-kiln">Founder. Card: soft grade, 1:1 crop, Newsreader, paper white.</span><span class="v-north">Design director. Card: cool grade, 3:2 crop, Switzer, dark field.</span></p>
+        </div>
+        <p class="c c-tiny c-addr"><span class="v-intro v-photo v-sizes v-feed">stipple.app<br>Style card 01<br>Ferro Athletic</span><span class="v-ferro">Style card 01<br>Ferro Athletic<br>Sportswear</span><span class="v-kiln">Style card 02<br>Kiln &amp; Co<br>Ceramics</span><span class="v-north">Style card 03<br>North Paw<br>Pet goods</span></p>
+        <i class="c c-qr qr"></i>
+        <div class="c c-ph c-b"><img src="img/cyclist.webp" alt="Cyclist by a white wall"></div>
+        <div class="c c-ph c-a"><img class="v-intro v-feed" src="img/tennis-court.webp" alt="Tennis court from above"><img class="v-photo" src="img/portrait-ines.webp" alt="Portrait of Ines"><img class="v-sizes" src="img/kick.webp" alt="Dancer mid-kick against a white wall"><img class="v-ferro" src="img/portrait-mei.webp" alt="Mei Tanaka, Ferro Athletic"><img class="v-kiln" src="img/portrait-kai.webp" alt="Kai Moreno, Kiln &amp; Co"><img class="v-north" src="img/portrait-leo.webp" alt="Leo Adeyemi, North Paw"></div>
+        <div class="stage__face" aria-hidden="true"><b>Style<br>card</b><span>Ferro · 01</span><i></i><i></i></div>
+      </div>
+    </div>
+    <!-- Every tile has a slot in the card: on scroll it flies into that slot (photos → photo frames, dot poster → code square) -->
+    <div class="cluster" aria-hidden="true">
+      <img class="tile" data-x="-.85" data-y="-.5" data-w="1" data-r="1" data-to="a" src="img/tennis-court.webp" alt="">
+      <img class="tile" data-x="-1.95" data-y=".25" data-w=".62" data-r="1.25" data-to="a" src="img/portrait-mei.webp" alt="">
+      <div class="tile tile--mount" data-x="0" data-y="1.75" data-w=".72" data-r="1.15" data-to="b"><img src="img/cyclist.webp" alt=""></div>
+      <img class="tile" data-x="1.95" data-y=".2" data-w=".56" data-r="1.4" data-to="a" src="img/kick.webp" alt="">
+      <div class="tile cluster__card" data-x=".85" data-y="-.55" data-w="1" data-r="1"><b>Style<br>card</b><span>Ferro · 01</span><i></i><i></i></div>
+      <div class="tile cluster__dots" data-x=".1" data-y=".08" data-w=".96" data-r="1" data-to="qr"><span>01</span><span>02</span><span></span><span>04</span><span></span><span>06</span><span></span><span>08</span><span></span></div>
+    </div>
+    <p class="hero__count" aria-hidden="true">Stipple · <b>000</b></p>
+    <p class="hero__sub">One Style Card holds your grade, crop, type and colour. Every photo your team exports goes through it.</p>
+  </div>
+</section>
+
+<!-- How it works: the four rules on the card, applied one by one to the same raw shot -->
+<section class="how" id="how">
+  <div class="how__sticky">
+    <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Four rules on one card">Four rules on one card</h2></div>
+    <div class="how__body">
+      <ol class="how__list">
+        <li><span class="how__n">01</span><div><b>Grade</b><p>Set the look once: contrast, warmth and how much colour. Every photo is graded to match, whoever shot it and on whatever camera.</p></div></li>
+        <li><span class="how__n">02</span><div><b>Crop</b><p>Pick your ratios and where the subject sits. Stipple finds the person in each shot and crops around them, for every size you export.</p></div></li>
+        <li><span class="how__n">03</span><div><b>Type</b><p>Your wordmark and fonts land in the same corner on every export, scaled right for a story frame or a three-metre window.</p></div></li>
+        <li><span class="how__n">04</span><div><b>Colour</b><p>One brand colour, used the same way every time: a band, a block or a full field. No more six shades of almost-blue.</p></div></li>
+      </ol>
+      <div class="spec" aria-hidden="true">
+        <div class="spec__frame">
+          <img loading="lazy" decoding="async" class="spec__img" src="img/sprint.webp" alt="">
+          <b class="spec__mark">Ferro</b>
+          <i class="spec__band"></i>
+          <div class="sel"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <p class="spec__state"><span class="spec__dot"></span><span class="spec__label">Raw shot</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Before / with: the same nine posts, dragged through the Style Card -->
+<section class="compare" id="compare">
+  <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Your feed, before and after">Your feed, before and after</h2></div>
+  <p class="intro">Nine posts from one month at Ferro. Same team, same shoots. Drag the line to run them through the Style Card.</p>
+  <div class="compare__box">
+    <div class="feedgrid feedgrid--before" aria-hidden="true">
+      <img loading="lazy" decoding="async" class="m1" src="img/track.webp" alt=""><img loading="lazy" decoding="async" class="m2" src="img/swim.webp" alt=""><img loading="lazy" decoding="async" class="m3" src="img/barbell.webp" alt="">
+      <img loading="lazy" decoding="async" class="m4" src="img/trail.webp" alt=""><img loading="lazy" decoding="async" class="m2" src="img/dancer.webp" alt=""><img loading="lazy" decoding="async" class="m1" src="img/skate-deck.webp" alt="">
+      <img loading="lazy" decoding="async" class="m3" src="img/squat.webp" alt=""><img loading="lazy" decoding="async" class="m4" src="img/deadlift.webp" alt=""><img loading="lazy" decoding="async" class="m2" src="img/dunk.webp" alt="">
+    </div>
+    <div class="feedgrid feedgrid--after" aria-hidden="true">
+      <div><img loading="lazy" decoding="async" src="img/track.webp" alt=""><b>Ferro</b></div><div class="f-blue"><b>Ferro</b><img loading="lazy" decoding="async" src="img/swim.webp" alt=""></div><div><img loading="lazy" decoding="async" src="img/barbell.webp" alt=""><i></i></div>
+      <div><img loading="lazy" decoding="async" src="img/trail.webp" alt=""><i></i></div><div class="f-dark"><b>Ferro<br>Athletic</b><img loading="lazy" decoding="async" src="img/dancer.webp" alt=""></div><div><img loading="lazy" decoding="async" src="img/skate-deck.webp" alt=""><b>Ferro</b></div>
+      <div class="f-blue"><b>Ferro</b><img loading="lazy" decoding="async" src="img/squat.webp" alt=""></div><div><img loading="lazy" decoding="async" src="img/deadlift.webp" alt=""><i></i></div><div><img loading="lazy" decoding="async" src="img/dunk.webp" alt=""><b>Ferro</b></div>
+    </div>
+    <div class="compare__line" aria-hidden="true"><i></i></div>
+    <input class="compare__range" type="range" min="0" max="100" value="85" aria-label="Before and after: drag to compare">
+  </div>
+  <p class="compare__legend"><span><i></i>Before</span><span><i class="is-blue"></i>With Stipple</span></p>
+</section>
+
+<!-- Ferro: the Style Card deals out everything one shoot became -->
+<section class="spread" id="ferro">
+  <div class="spread__sticky">
+    <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Ferro shot once">Ferro shot once</h2></div>
+    <div class="spread__stage">
+      <figure class="ex" data-x="16" data-y="30" style="--w:1.05;--r:.707"><div class="ex__f"><img loading="lazy" decoding="async" src="img/track.webp" alt="Ferro poster: runner on a track"><b class="ex__mark">Ferro</b></div></figure>
+      <figure class="ex" data-x="33" data-y="72" style="--w:.62;--r:.5625"><div class="ex__f"><img loading="lazy" decoding="async" src="img/dancer.webp" alt="Story frame: dancer"></div></figure>
+      <figure class="ex" data-x="43" data-y="20" style="--w:.7;--r:1"><div class="ex__f ex__f--blue"><b class="ex__mark">Ferro</b><img loading="lazy" decoding="async" class="ex__inset" src="img/sprint.webp" alt="Social post: sprinter in the blocks"></div></figure>
+      <figure class="ex" data-x="66" data-y="24" style="--w:.62;--r:.5625"><div class="ex__f"><img loading="lazy" decoding="async" src="img/squat.webp" alt="Story frame: woman squatting with a barbell"></div></figure>
+      <figure class="ex" data-x="84" data-y="38" style="--w:1.45;--r:1.5"><div class="ex__f"><img loading="lazy" decoding="async" src="img/skate-air.webp" alt="Shop window: skater in the air"><i class="ex__band"></i></div></figure>
+      <figure class="ex" data-x="62" data-y="76" style="--w:.56;--r:.8"><div class="ex__f ex__f--dark"><b class="ex__mark">Ferro<br>Athletic</b><span>Kit tag · front</span></div></figure>
+      <figure class="ex" data-x="84" data-y="80" style="--w:1;--r:1.78"><div class="ex__f"><img loading="lazy" decoding="async" src="img/trail.webp" alt="Banner: runner leaping on a trail"><b class="ex__mark">Ferro</b></div></figure>
+      <figure class="ex" data-x="12" data-y="78" style="--w:.7;--r:.8"><div class="ex__f"><img loading="lazy" decoding="async" src="img/barbell.webp" alt="Feed post: athlete with a barbell"><i class="ex__band"></i></div></figure>
+      <div class="spread__card"><b>Style<br>card</b><span>Ferro · 01</span><i></i><i></i></div>
+    </div>
+    <p class="spread__stats"><span><b class="spread__n">0</b> exports</span><span>6 days</span><span>0 off-brand</span></p>
+  </div>
+</section>
+
+<!-- Pricing (kept) -->
+<section class="pricing" id="pricing">
+  <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Pick a plan, keep the brand">Pick a plan, keep the brand</h2></div>
+  <div class="plans">
+    <article class="plan">
+      <div class="plan__top"><span class="pill">Sketch</span><span class="plan__no">0001</span></div>
+      <p class="plan__price"><span>$0</span> per seat / month</p>
+      <p class="plan__lede">For trying Stipple on your own work.</p>
+      <ul><li>50 exports a month</li><li>One Style Card</li><li>PNG export</li></ul>
+      <a class="btn btn--glass" href="#join">Start sketching</a>
+    </article>
+    <article class="plan plan--hot">
+      <div class="plan__top"><span class="pill">Studio</span><span class="plan__no">0002 · most picked</span></div>
+      <p class="plan__price"><span>$24</span> per seat / month</p>
+      <p class="plan__lede">For brand teams shipping every week.</p>
+      <ul><li>Unlimited exports</li><li>Style Cards for 3 brands</li><li>Every size, every format</li><li>5 seats included</li></ul>
+      <a class="btn btn--white" href="#join">Start a trial</a>
+      <div class="sel" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </article>
+    <article class="plan">
+      <div class="plan__top"><span class="pill">Press</span><span class="plan__no">0003</span></div>
+      <p class="plan__price"><span>$64</span> per seat / month</p>
+      <p class="plan__lede">For agencies running many brands at once.</p>
+      <ul><li>Unlimited Style Cards</li><li>API and bulk export</li><li>SSO and a named designer</li></ul>
+      <a class="btn btn--glass" href="#join">Talk to us</a>
+    </article>
+  </div>
+</section>
+
+<!-- FAQ: native details/summary -->
+<section class="faq" id="faq">
+  <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Questions, answered">Questions, answered</h2></div>
+  <div class="faq__list">
+    <details><summary>What is a Style Card?<i></i></summary><p>One page that holds your brand's photo rules: grade, crop, type and colour. Stipple reads it every time anyone on your team exports a photo, so nobody has to remember the brand book.</p></details>
+    <details><summary>Do I need to be a designer?<i></i></summary><p>No. Upload ten photos you love, or answer six questions about your brand, and Stipple drafts the card. A designer can fine-tune it later.</p></details>
+    <details><summary>Which sizes can it export?<i></i></summary><p>Every common social, web and print size out of the box: 1:1, 4:5, 9:16, 16:9 and A-series posters, plus any custom size you add to the card.</p></details>
+    <details><summary>Does it change my original photos?<i></i></summary><p>Never. Originals stay untouched. Stipple makes new exports and keeps a link back to the source, so you can re-run them if the card changes.</p></details>
+    <details><summary>Can freelancers and agencies use our card?<i></i></summary><p>Yes. Send a link and they export through your card without seeing the rest of your workspace. Studio plans include five seats.</p></details>
+    <details><summary>Where does it plug in?<i></i></summary><p>Use the web app, the Figma and Lightroom plugins, or the API. Exports can go straight to your shop, your CMS or a shared folder.</p></details>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="join" id="join">
+  <div class="say"><i class="say__dot"></i><h2 class="say__line" data-text="Stop exporting off-brand">Stop exporting off-brand</h2></div>
+  <p class="join__text">Fifty free exports a month. Your first Style Card takes about two minutes.</p>
+  <form class="join__form" onsubmit="event.preventDefault();this.classList.add('is-sent')">
+    <label class="sr" for="email">Your email</label>
+    <input id="email" type="email" placeholder="Your email" required autocomplete="email">
+    <button class="btn btn--white" type="submit">Get access</button>
+    <p class="join__ok">You're in. Check your inbox.</p>
+  </form>
+  <div class="join__foot">
+    <span>© 2026 Stipple Labs</span>
+    <a class="logo logo--sm" href="#top"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 1h10v4H6zM2 5h4v4H2zM6 9h8v4H6zM14 13h4v4h-4zM2 17h12v-4H2z"/></svg><span>Stipple</span></a>
+    <a href="mailto:hello@stipple.app">hello@stipple.app</a>
+  </div>
+</footer>
+
+<a class="dock" href="#join"><span class="dock__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 1h10v4H6zM2 5h4v4H2zM6 9h8v4H6zM14 13h4v4h-4zM2 17h12v-4H2z"/></svg></span><span class="btn btn--white">Try it free</span></a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
